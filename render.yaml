@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: file-browser-app
+    name: MapLarge
     runtime: docker
     plan: free
     dockerfilePath: Dockerfile
