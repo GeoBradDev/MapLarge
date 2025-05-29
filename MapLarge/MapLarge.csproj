@@ -15,4 +15,8 @@
       <Content Include="TestProject.sln" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="README.md" />
+    </ItemGroup>
+
 </Project>
