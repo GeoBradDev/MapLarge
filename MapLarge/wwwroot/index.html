@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>File Browser</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -11,9 +11,11 @@
 <p id="summary"></p>
 
 <form id="uploadForm" enctype="multipart/form-data">
-    <input type="file" id="fileInput" name="file" required />
+    <input type="file" id="fileInput" name="file" required/>
     <button type="submit">Upload</button>
 </form>
+
+<input type="text" id="filterBox" placeholder="Filter files and folders..."/>
 
 <ul id="file-list"></ul>
 
