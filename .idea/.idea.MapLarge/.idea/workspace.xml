@@ -9,14 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d9fde20-c2e5-4442-b285-769aa4bb9e42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MapLarge/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MapLarge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapLarge/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MapLarge/Controllers/BrowseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Controllers/BrowseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/ref/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/ref/MapLarge.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/refint/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/refint/MapLarge.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/Controllers/TestController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/Models/FileItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Models/FileItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MapLarge/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/wwwroot/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748475398581</updated>
-      <workItem from="1748475400214" duration="3891000" />
+      <workItem from="1748475400214" duration="5379000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -124,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748478512017</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Delete function working">
+      <option name="closed" value="true" />
+      <created>1748479358940</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748479358940</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +141,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="Delete function working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete function working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

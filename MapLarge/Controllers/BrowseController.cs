@@ -1,3 +1,5 @@
+// This controller handles directory browsing, file uploads, and deletions.
+// It returns JSON to a single-page frontend served from wwwroot/index.html.
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -6,6 +8,9 @@ public class BrowseController : ControllerBase
 {
     private readonly string rootDir = "/home/bradstricherz/Downloads"; // Adjust as needed
 
+    // GET /api/browse/{*path} - Returns directory listing (folders and files)
+    // Returns a list of files and folders in the specified path
+    // If no path is provided, lists contents of the rootDir
     [HttpGet("{*path}")]
     public IActionResult Get(string path = "")
     {
@@ -29,24 +34,22 @@ public class BrowseController : ControllerBase
 
         return Ok(items);
     }
-
+    
+    // POST /api/browse/upload/{*path} - Uploads a file to the given directory
+    // Accepts a multipart file upload to the specified folder
+    // Saves the file to disk under rootDir/path/
     [HttpPost("upload/{path?}")]
     public async Task<IActionResult> UploadFile([FromRoute] string? path, IFormFile file)
     {
-        Console.WriteLine($"Upload request to path: {path}");
-        Console.WriteLine($"File: {file?.FileName}, Size: {file?.Length}");
-
         if (file == null || file.Length == 0)
             return BadRequest("No file uploaded.");
 
         var targetDir = Path.Combine(rootDir, path ?? "");
-        Console.WriteLine($"Resolved targetDir: {targetDir}");
 
         if (!Directory.Exists(targetDir))
             return NotFound("Target directory does not exist.");
 
         var targetPath = Path.Combine(targetDir, file.FileName);
-        Console.WriteLine($"Saving to: {targetPath}");
 
         using var stream = new FileStream(targetPath, FileMode.Create);
         await file.CopyToAsync(stream);
@@ -54,6 +57,9 @@ public class BrowseController : ControllerBase
         return Ok(new { success = true, file = file.FileName });
     }
 
+    // DELETE /api/browse/delete/{*path} - Deletes a file or folder (recursive if folder)
+    // Deletes a file or directory at the given path (relative to rootDir)
+    // Folders are deleted recursively (use with caution)
     [HttpDelete("delete/{*path}")]
     public IActionResult DeleteItem([FromRoute] string path)
     {

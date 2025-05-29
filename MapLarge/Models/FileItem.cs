@@ -1,3 +1,6 @@
+// Represents a file or folder in a directory listing returned by the API
+// Used by the BrowseController to serialize file metadata
+
 using System.Text.Json.Serialization;
 
 public class FileItem

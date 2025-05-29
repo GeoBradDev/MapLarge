@@ -42,7 +42,13 @@
 
 <ul id="file-list"></ul>
 
+<!--
+This script fetches and displays file/folder listings from the ASP.NET API.
+    It supports deep-link navigation, uploads via form, and file deletion via buttons.
+-->
 <script>
+    // Fetch and render contents of the given path
+    // Updates UI with clickable folders and delete buttons
     async function fetchAndRender(path = '') {
         const response = await fetch(`/api/browse/${encodeURIComponent(path)}`);
         const list = document.getElementById('file-list');
@@ -118,6 +124,8 @@
     fetchAndRender(decodeURIComponent(location.hash.slice(1)));
 </script>
 <script>
+    // Handles file upload form submission
+    // Sends the selected file to the backend API
     document.getElementById('uploadForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const file = document.getElementById('fileInput').files[0];

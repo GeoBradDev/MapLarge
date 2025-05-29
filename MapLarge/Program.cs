@@ -1,16 +1,27 @@
+// Basic configuration and middleware pipeline for serving the API and SPA frontend
+
+// Configure the application builder and dependency injection
 var builder = WebApplication.CreateBuilder(args);
+
+// Register controller support
 builder.Services.AddControllers();
+
+// Enable CORS for cross-origin frontend access
 builder.Services.AddCors(options => {
     options.AddDefaultPolicy(policy =>
-        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+        policy.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
 
 var app = builder.Build();
 
+// Use CORS and serve static files from wwwroot/index.html
 app.UseCors();
-// app.UseHttpsRedirection(); // (optional)
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
+// Map API controllers (e.g., /api/browse)
 app.MapControllers();
+
 app.Run();
