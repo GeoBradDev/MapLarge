@@ -28,9 +28,3 @@ This project implements a minimal file browser with upload and delete features u
 - The home directory is set to: `~/Downloads`
 - The file structure is intentionally minimal and clean
 - Inline comments are provided to explain each component
-
-##  Development Notes
-
-All code was authored and tested by me. I used standard developer resources throughout the process, including documentation, debugging tools, and LLMs as a productivity assistant. Assistance included help with syntax clarification, UI layout suggestions, and code organization. All architectural decisions, logic design, and implementation were my own.
-
-This reflects how I typically approach real-world development tasks: writing code I understand, can defend, and am prepared to iterate on based on team feedback.
