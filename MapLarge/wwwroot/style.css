@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+    max-width: 800px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+#summary {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+form {
+    margin-bottom: 1.5rem;
+}
+
+input[type="file"] {
+    margin-right: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+li:hover {
+    background-color: #f6f6f6;
+}
+
+.label {
+    flex-grow: 1;
+}
+
+.label.folder {
+    font-weight: bold;
+}
+
+button.delete-btn {
+    background: none;
+    border: none;
+    color: #b00;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+button.delete-btn:hover {
+    text-decoration: underline;
+}

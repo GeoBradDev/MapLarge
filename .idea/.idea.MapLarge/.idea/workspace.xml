@@ -9,12 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d9fde20-c2e5-4442-b285-769aa4bb9e42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MapLarge/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapLarge/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapLarge/wwwroot/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapLarge/wwwroot/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MapLarge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapLarge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/Controllers/BrowseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Controllers/BrowseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/Controllers/TestController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/Models/FileItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Models/FileItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapLarge/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MapLarge/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/wwwroot/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,32 +25,34 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "GeoBradDev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GeoBradDev&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GeoBradDev/MapLarge.git",
-    "accountId": "bc503072-c066-4b9a-8794-8d43caccca7d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GeoBradDev/MapLarge.git&quot;,
+    &quot;accountId&quot;: &quot;bc503072-c066-4b9a-8794-8d43caccca7d&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2xkHxXKpbFRf9JS9ixxmHch1hRV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,6 +65,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -130,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748479358940</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UI and README.md update">
+      <option name="closed" value="true" />
+      <created>1748481650339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748481650339</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +152,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="Delete function working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete function working" />
+    <MESSAGE value="UI and README.md update" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI and README.md update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

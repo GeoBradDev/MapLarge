@@ -1,0 +1,104 @@
+// Fetch and render directory contents from the API
+async function fetchAndRender(path = '') {
+    const response = await fetch(`/api/browse/${encodeURIComponent(path)}`);
+    const list = document.getElementById('file-list');
+    const title = document.getElementById('path-title');
+    const summary = document.getElementById('summary');
+
+    if (!response.ok) {
+        list.innerHTML = `<li style="color:red;">Failed to load folder: ${path}</li>`;
+        summary.textContent = '';
+        return;
+    }
+
+    const items = await response.json();
+
+    const fileCount = items.filter(i => i.type === 'file').length;
+    const folderCount = items.filter(i => i.type === 'folder').length;
+    const totalSize = items
+        .filter(i => i.size != null)
+        .reduce((sum, i) => sum + i.size, 0);
+
+    summary.textContent = `${folderCount} folders, ${fileCount} files, ${totalSize} bytes`;
+    title.textContent = `/${path}`;
+    list.innerHTML = '';
+
+    if (path) {
+        const parentPath = path.split('/').slice(0, -1).join('/');
+        const upPath = parentPath || '';
+        const upItem = document.createElement('li');
+        upItem.innerHTML = `<span class="label folder">..</span>`;
+        upItem.onclick = () => goTo(upPath);
+        list.appendChild(upItem);
+    }
+
+    for (const item of items) {
+        const entry = document.createElement('li');
+        const label = document.createElement('span');
+        label.className = `label ${item.type}`;
+        label.textContent = `${item.name}${item.size != null ? ` (${item.size} bytes)` : ''}`;
+
+        if (item.type === 'folder') {
+            entry.onclick = () => goTo(path ? `${path}/${item.name}` : item.name);
+        }
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = async (e) => {
+            e.stopPropagation();
+            if (!confirm(`Delete "${item.name}"?`)) return;
+            const targetPath = path ? `${path}/${item.name}` : item.name;
+            const res = await fetch(`/api/browse/delete/${encodeURIComponent(targetPath)}`, {
+                method: 'DELETE'
+            });
+
+            if (res.ok) {
+                fetchAndRender(path);
+            } else {
+                const err = await res.text();
+                alert('Delete failed: ' + err);
+            }
+        };
+
+        entry.appendChild(label);
+        entry.appendChild(deleteBtn);
+        list.appendChild(entry);
+    }
+}
+
+function goTo(path) {
+    location.hash = encodeURIComponent(path);
+}
+
+window.addEventListener('hashchange', () => {
+    const path = decodeURIComponent(location.hash.slice(1));
+    fetchAndRender(path);
+});
+
+fetchAndRender(decodeURIComponent(location.hash.slice(1)));
+
+// Handle file uploads
+document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const file = document.getElementById('fileInput').files[0];
+    if (!file) return;
+
+    const path = decodeURIComponent(location.hash.slice(1));
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const res = await fetch(`/api/browse/upload/${path}`, {
+        method: 'POST',
+        body: formData
+    });
+
+    if (res.ok) {
+        alert('File uploaded successfully.');
+        document.getElementById('fileInput').value = '';
+        fetchAndRender(path);
+    } else {
+        const error = await res.text();
+        alert('Upload failed: ' + error);
+    }
+});

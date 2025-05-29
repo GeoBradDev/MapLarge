@@ -1,0 +1,58 @@
+# === .NET / C# ===
+## Build Folders
+bin/
+obj/
+
+## User-specific Files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Logs
+*.log
+
+## Packages
+*.nupkg
+packages/
+*.snupkg
+
+## Visual Studio
+.vs/
+.vscode/
+
+## Other IDE/Tooling
+.idea/
+*.sublime*
+
+## Publish/Deploy output
+publish/
+out/
+artifacts/
+
+# === Web / Frontend ===
+## Dependency directories
+node_modules/
+
+## Build Artifacts
+dist/
+build/
+
+## Compiled Source
+*.js.map
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# === General ===
+*.zip
+*.bak
+*.tmp
+*.swp
+
+# === Custom ===
+# Ignore config override if applicable
+appsettings.Local.json
