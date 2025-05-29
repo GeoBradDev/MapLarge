@@ -1,12 +1,19 @@
 // This controller handles directory browsing, file uploads, and deletions.
 // It returns JSON to a single-page frontend served from wwwroot/index.html.
+
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
 public class BrowseController : ControllerBase
 {
-    private readonly string rootDir = "/home/bradstricherz/Downloads"; // Adjust as needed
+    private readonly string rootDir;
+
+    public BrowseController(IConfiguration config)
+    {
+        rootDir = config["HOME_DIR"] ?? "/home/bradstricherz/Downloads";
+    }
+
 
     // GET /api/browse/{*path} - Returns directory listing (folders and files)
     // Returns a list of files and folders in the specified path
@@ -34,7 +41,7 @@ public class BrowseController : ControllerBase
 
         return Ok(items);
     }
-    
+
     // POST /api/browse/upload/{*path} - Uploads a file to the given directory
     // Accepts a multipart file upload to the specified folder
     // Saves the file to disk under rootDir/path/
@@ -85,4 +92,20 @@ public class BrowseController : ControllerBase
             return StatusCode(500, new { error = ex.Message });
         }
     }
+    [HttpGet("download/{*path}")]
+    public IActionResult DownloadFile([FromRoute] string path)
+    {
+        if (string.IsNullOrWhiteSpace(path))
+            return BadRequest("Path is required.");
+
+        var fullPath = Path.Combine(rootDir, path);
+
+        if (!System.IO.File.Exists(fullPath))
+            return NotFound("File not found.");
+
+        var contentType = "application/octet-stream";
+        var fileName = Path.GetFileName(fullPath);
+        return PhysicalFile(fullPath, contentType, fileName);
+    }
+
 }

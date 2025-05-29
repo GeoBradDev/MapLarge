@@ -66,9 +66,21 @@ function renderFilteredList(path) {
             }
         };
 
+// Download button (added independently)
+        if (item.type === 'file') {
+            const downloadBtn = document.createElement('a');
+            downloadBtn.textContent = 'Download';
+            downloadBtn.href = `/api/browse/download/${encodeURIComponent(path ? `${path}/${item.name}` : item.name)}`;
+            downloadBtn.className = 'download-link';
+            downloadBtn.download = item.name;
+            downloadBtn.onclick = (e) => e.stopPropagation(); // Prevent folder navigation
+            entry.appendChild(downloadBtn);
+        }
+
         entry.appendChild(label);
         entry.appendChild(deleteBtn);
         list.appendChild(entry);
+
     }
 }
 

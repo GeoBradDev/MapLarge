@@ -6,6 +6,13 @@ body {
     color: #333;
 }
 
+.download-link {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: blue;
+    font-size: 0.9em;
+}
+
 h2 {
     margin-bottom: 0.5rem;
     font-size: 1.4rem;

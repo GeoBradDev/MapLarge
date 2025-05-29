@@ -1,36 +1,89 @@
 # MapLarge Test Project – Brad Stricherz
 
-##  Overview
-This project implements a minimal file browser with upload and delete features using **C# (ASP.NET Core)** and **vanilla JavaScript**.
+## Overview
+
+This project implements a minimalist file browser using **C# (ASP.NET Core)** for the backend and **vanilla JavaScript** for the frontend. It supports browsing, uploading, downloading, and deleting files and folders from a configurable home directory, with a fully client-rendered, deep-linkable UI.
 
 ---
 
 ## Requirements Met
-- ️ End-to-end Web API + SPA
-- ️ Deep-linkable JavaScript UI
-- ️ Browse, upload, delete files and folders
-- ️ JSON output
-- ️ Minimal boilerplate
--  No unnecessary frameworks
+
+-  End-to-end Web API + SPA
+-  Deep-linkable JavaScript UI (via URL hash)
+-  Browse, upload, download, and delete files and folders
+-  JSON-only API responses (no server-rendered HTML)
+-  Fully client-side rendering with DOM updates via JavaScript
+-  Minimal boilerplate and framework usage
 
 ---
 
 ##  How to Run
 
-1. Build the project with `dotnet build`
-2. Run the server with `dotnet run --project MapLarge/MapLarge.csproj`
-3. Open your browser and visit: [http://localhost:5120/](http://localhost:5120/)
+1. **Build the project**:
+   ```bash
+   dotnet build
+````
+
+2. **Run the server**:
+
+   ```bash
+   dotnet run --project MapLarge/MapLarge.csproj
+   ```
+
+3. **Open your browser** and navigate to:
+
+   ```
+   http://localhost:5120/
+   ```
 
 ---
 
-##  Notes
+## ⚙️ Configuration
 
-- The home directory is set to: `~/Downloads`
-- The file structure is intentionally minimal and clean
-- Inline comments are provided to explain each component
+* The home directory is configurable via an environment variable:
 
-##  Development Notes
+  ```bash
+  export HOME_DIR=/path/to/your/folder
+  ```
 
-All code was authored and tested by me. I used standard developer resources throughout the process, including documentation, debugging tools, and LLMs as a productivity assistant. Assistance included help with syntax clarification, UI layout suggestions, and code organization. All architectural decisions, logic design, and implementation were my own.
+  Defaults to `~/Downloads` if not set.
 
-This reflects how I typically approach real-world development tasks: writing code I understand, can defend, and am prepared to iterate on based on team feedback.
+---
+
+##  Features
+
+*  Browse nested folders with clickable navigation
+*  Filter visible files and folders using a search box
+* ️ Upload files via drag-and-drop or file picker
+* ️ Download individual files with a click
+*  Delete files and folders (recursively)
+
+---
+
+## File Structure
+
+* `BrowseController.cs`: Exposes RESTful endpoints for browsing, uploading, downloading, and deleting files
+* `index.html`: Minimal HTML scaffold with no server-side rendering
+* `script.js`: Handles all UI rendering, filtering, and interaction logic
+* `style.css`: Lightweight optional styling for usability
+
+---
+
+## Development Notes
+
+All code was written and tested by me. I used standard developer tools and documentation, as well as LLM-based assistance for productivity (e.g., refining syntax, brainstorming edge cases, and cleaning up layout logic). All architectural and design decisions were my own.
+
+This project reflects how I typically approach real-world tasks:
+
+* Minimalist but complete implementation
+* Clean separation of concerns
+* Extensible, understandable code
+* Built to work and be easily discussed in follow-up
+
+---
+
+## Security Note
+
+This demo app exposes raw file system access and does not perform authentication or path sanitization. In a production environment, strong validation and access controls must be added.
+
+
