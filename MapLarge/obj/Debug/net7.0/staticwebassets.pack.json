@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/home/bradstricherz/RiderProjects/MapLarge/MapLarge/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.MapLarge.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.MapLarge.props",
+      "PackagePath": "build\\MapLarge.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MapLarge.props",
+      "PackagePath": "buildMultiTargeting\\MapLarge.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MapLarge.props",
+      "PackagePath": "buildTransitive\\MapLarge.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

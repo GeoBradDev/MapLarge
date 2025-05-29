@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "zqu2GwUtTimo6xSiCAX5uSIgwCUa3/6IuOXTmLp3egs=",
+  "Source": "MapLarge",
+  "BasePath": "_content/MapLarge",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MapLarge/wwwroot",
+      "Source": "MapLarge",
+      "ContentRoot": "/home/bradstricherz/RiderProjects/MapLarge/MapLarge/wwwroot/",
+      "BasePath": "_content/MapLarge",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/bradstricherz/RiderProjects/MapLarge/MapLarge/wwwroot/index.html",
+      "SourceId": "MapLarge",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/bradstricherz/RiderProjects/MapLarge/MapLarge/wwwroot/",
+      "BasePath": "_content/MapLarge",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ]
+}
