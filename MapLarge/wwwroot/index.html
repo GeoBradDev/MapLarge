@@ -89,6 +89,7 @@ This script fetches and displays file/folder listings from the ASP.NET API.
             entry.textContent = `${item.type === 'folder' ? '📁' : '📄'} ${item.name}${item.size != null ? ` (${item.size} bytes)` : ''}`;
             const deleteBtn = document.createElement('button');
             deleteBtn.textContent = '🗑️';
+            deleteBtn.setAttribute('aria-label', `Delete ${item.name}`);
             deleteBtn.style.marginLeft = '1rem';
             deleteBtn.onclick = async (e) => {
                 e.stopPropagation();
