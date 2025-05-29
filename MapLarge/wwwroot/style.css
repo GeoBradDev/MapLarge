@@ -71,3 +71,27 @@ button.delete-btn {
 button.delete-btn:hover {
     text-decoration: underline;
 }
+
+#easter-egg-button {
+    transition: opacity 0.3s ease;
+}
+
+#easter-egg-button:hover {
+    opacity: 0.8;
+}
+#easter-egg-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    background: none;
+    border: none;
+    opacity: 0.05;
+    cursor: pointer;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+#easter-egg-button:hover {
+    opacity: 0.8;
+}

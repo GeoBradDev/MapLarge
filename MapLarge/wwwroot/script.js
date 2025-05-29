@@ -138,3 +138,7 @@ window.addEventListener('hashchange', () => {
     const path = decodeURIComponent(location.hash.slice(1));
     fetchAndRender(path);
 });
+
+document.getElementById('easter-egg-button').addEventListener('click', function () {
+    window.open('https://youtu.be/S1MaxBllvDg?si=0SmTE1kJLI-yfkqJ', '_blank');
+});
