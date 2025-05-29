@@ -17,7 +17,7 @@
       "applicationUrl": "https://localhost:7146;http://localhost:5120",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "HOME_DIR": "/your/custom/path"
+        "HOME_DIR": "/home/bradstricherz/Downloads/"
       }
     },
     "IIS Express": {

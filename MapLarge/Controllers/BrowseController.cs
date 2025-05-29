@@ -45,7 +45,7 @@ public class BrowseController : ControllerBase
     // POST /api/browse/upload/{*path} - Uploads a file to the given directory
     // Accepts a multipart file upload to the specified folder
     // Saves the file to disk under rootDir/path/
-    [HttpPost("upload/{path?}")]
+    [HttpPost("upload/{*path}")]
     public async Task<IActionResult> UploadFile([FromRoute] string? path, IFormFile file)
     {
         if (file == null || file.Length == 0)
@@ -53,8 +53,11 @@ public class BrowseController : ControllerBase
 
         var targetDir = Path.Combine(rootDir, path ?? "");
 
+        // ✅ Ensure the directory exists
         if (!Directory.Exists(targetDir))
-            return NotFound("Target directory does not exist.");
+        {
+            Directory.CreateDirectory(targetDir);
+        }
 
         var targetPath = Path.Combine(targetDir, file.FileName);
 
@@ -63,6 +66,7 @@ public class BrowseController : ControllerBase
 
         return Ok(new { success = true, file = file.FileName });
     }
+
 
     // DELETE /api/browse/delete/{*path} - Deletes a file or folder (recursive if folder)
     // Deletes a file or directory at the given path (relative to rootDir)
@@ -92,6 +96,7 @@ public class BrowseController : ControllerBase
             return StatusCode(500, new { error = ex.Message });
         }
     }
+
     [HttpGet("download/{*path}")]
     public IActionResult DownloadFile([FromRoute] string path)
     {
@@ -107,5 +112,4 @@ public class BrowseController : ControllerBase
         var fileName = Path.GetFileName(fullPath);
         return PhysicalFile(fullPath, contentType, fileName);
     }
-
 }
