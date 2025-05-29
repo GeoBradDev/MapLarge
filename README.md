@@ -6,7 +6,7 @@ This project implements a minimalist file browser using **C# (ASP.NET Core)** fo
 
 ---
 
-## ✅ Requirements Met
+## Requirements Met
 
 - End-to-end Web API + SPA
 - Deep-linkable JavaScript UI (via URL hash)
@@ -17,20 +17,19 @@ This project implements a minimalist file browser using **C# (ASP.NET Core)** fo
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 [https://maplarge.onrender.com/](https://maplarge.onrender.com/)
+ [https://maplarge.onrender.com/](https://maplarge.onrender.com/)
 
 The application is deployed using a containerized service on [Render.com](https://render.com).
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 * The home directory is configurable via an environment variable:
   ```bash
   export HOME_DIR=/path/to/your/folder
-````
 
 If not set, it defaults to `~/Downloads`.
 
@@ -58,7 +57,7 @@ If not set, it defaults to `~/Downloads`.
 
 ---
 
-## 📦 Containerization (Docker)
+## Containerization (Docker)
 
 This project is fully containerized using a `Dockerfile` with multi-stage build:
 
@@ -80,7 +79,7 @@ ENTRYPOINT ["dotnet", "MapLarge.dll"]
 
 ---
 
-## 📄 Render Deployment (`render.yaml`)
+##  Render Deployment (`render.yaml`)
 
 This project is deployed using a [Render](https://render.com) blueprint file:
 
@@ -105,7 +104,7 @@ To deploy:
 
 ---
 
-## ✨ Features
+## Features
 
 * Browse nested folders with clickable navigation
 * Filter visible files and folders using a search box
@@ -115,7 +114,7 @@ To deploy:
 
 ---
 
-## 🗂️ File Structure
+## 🗂 File Structure
 
 * `BrowseController.cs`: RESTful API for directory browsing, upload, download, delete
 * `index.html`: Plain HTML UI shell
@@ -126,7 +125,7 @@ To deploy:
 
 ---
 
-## 🧑‍💻 Development Notes
+## Development Notes
 
 All code was written and tested by me. I used standard developer tools and documentation, as well as LLM-based assistance for productivity (e.g., refining syntax, brainstorming edge cases, and cleaning up layout logic). All architectural and design decisions were my own.
 
@@ -139,7 +138,7 @@ This project reflects how I typically approach real-world tasks:
 
 ---
 
-## ⚠️ Security Note
+##  Security Note
 
 This demo app exposes raw file system access and does not perform authentication or input sanitization. In a production environment, strong validation, sandboxing, and access controls must be implemented.
 
