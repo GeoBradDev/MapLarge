@@ -77,7 +77,11 @@ This script fetches and displays file/folder listings from the ASP.NET API.
         if (path) {
             const parentPath = path.split('/').slice(0, -1).join('/');
             const upPath = parentPath || '';
-            list.innerHTML += `<li class="folder" onclick="goTo('${upPath}')">⬅️ ..</li>`;
+            const upEntry = document.createElement('li');
+            upEntry.className = 'folder';
+            upEntry.textContent = '⬅️ ..';
+            upEntry.onclick = () => goTo(upPath);
+            list.appendChild(upEntry);
         }
 
         for (const item of items) {
