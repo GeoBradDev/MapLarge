@@ -1,17 +1,9 @@
 services:
   - type: web
-    name: MapLarge
-    runtime: dotnet
-    repo: https://github.com/GeoBradDev/MapLarge
-    branch: main
-    buildCommand: dotnet build
-    startCommand: dotnet run --project MapLarge/MapLarge.csproj
+    name: file-browser-app
+    runtime: docker
+    plan: free
+    dockerfilePath: Dockerfile
     envVars:
       - key: HOME_DIR
-        value: /var/data 
-    plan: free
-    autoDeploy: true
-    buildFilter:
-      paths:
-        - MapLarge/**
-        - wwwroot/**
+        value: /var/data
