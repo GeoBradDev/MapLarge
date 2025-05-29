@@ -77,6 +77,28 @@
         for (const item of items) {
             const entry = document.createElement('li');
             entry.textContent = `${item.type === 'folder' ? '📁' : '📄'} ${item.name}${item.size != null ? ` (${item.size} bytes)` : ''}`;
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = '🗑️';
+            deleteBtn.style.marginLeft = '1rem';
+            deleteBtn.onclick = async (e) => {
+                e.stopPropagation();
+                if (!confirm(`Delete "${item.name}"?`)) return;
+
+                const targetPath = path ? `${path}/${item.name}` : item.name;
+                const res = await fetch(`/api/browse/delete/${encodeURIComponent(targetPath)}`, {
+                    method: 'DELETE'
+                });
+
+                if (res.ok) {
+                    fetchAndRender(path);
+                } else {
+                    const err = await res.text();
+                    alert('Delete failed: ' + err);
+                }
+            };
+
+            entry.appendChild(deleteBtn);
+
             if (item.type === 'folder') {
                 entry.onclick = () => goTo(path ? `${path}/${item.name}` : item.name);
             }
@@ -93,7 +115,6 @@
         fetchAndRender(path);
     });
 
-    // Load initial path
     fetchAndRender(decodeURIComponent(location.hash.slice(1)));
 </script>
 <script>

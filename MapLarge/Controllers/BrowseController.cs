@@ -53,4 +53,30 @@ public class BrowseController : ControllerBase
 
         return Ok(new { success = true, file = file.FileName });
     }
+
+    [HttpDelete("delete/{*path}")]
+    public IActionResult DeleteItem([FromRoute] string path)
+    {
+        if (string.IsNullOrWhiteSpace(path))
+            return BadRequest("Path is required.");
+
+        var fullPath = Path.Combine(rootDir, path);
+
+        if (!System.IO.File.Exists(fullPath) && !Directory.Exists(fullPath))
+            return NotFound("File or folder not found.");
+
+        try
+        {
+            if (System.IO.File.Exists(fullPath))
+                System.IO.File.Delete(fullPath);
+            else if (Directory.Exists(fullPath))
+                Directory.Delete(fullPath, recursive: true); // use caution
+
+            return Ok(new { success = true, path });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
 }

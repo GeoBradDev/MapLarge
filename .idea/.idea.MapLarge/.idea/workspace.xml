@@ -8,7 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d9fde20-c2e5-4442-b285-769aa4bb9e42" name="Changes" comment="" />
+    <list default="true" id="2d9fde20-c2e5-4442-b285-769aa4bb9e42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MapLarge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MapLarge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/Controllers/BrowseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/Controllers/BrowseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/bin/Debug/net7.0/MapLarge.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/MapLarge.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/ref/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/ref/MapLarge.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/refint/MapLarge.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/refint/MapLarge.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapLarge/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MapLarge/wwwroot/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +31,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GeoBradDev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GeoBradDev/MapLarge.git",
+    "accountId": "bc503072-c066-4b9a-8794-8d43caccca7d"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MapLarge/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 6
@@ -36,6 +65,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,16 +114,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748475398581</updated>
-      <workItem from="1748475400214" duration="2946000" />
+      <workItem from="1748475400214" duration="3891000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1748478512017</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748478512017</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
