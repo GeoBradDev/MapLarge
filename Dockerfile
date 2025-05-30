@@ -7,7 +7,6 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet restore MapLarge/MapLarge.csproj
 RUN dotnet publish MapLarge/MapLarge.csproj -c Release -o /app/publish
 
 # Final stage
