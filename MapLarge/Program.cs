@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Register controller support
 builder.Services.AddControllers();
 
+builder.Services.Configure<FileBrowserOptions>(builder.Configuration.GetSection("FileBrowser"));
+
 // Enable CORS for cross-origin frontend access
 builder.Services.AddCors(options => {
     options.AddDefaultPolicy(policy =>

@@ -2,6 +2,7 @@
 // It returns JSON to a single-page frontend served from wwwroot/index.html.
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace MapLarge.Controllers
 {
@@ -11,9 +12,11 @@ namespace MapLarge.Controllers
     {
         private readonly string _rootDir;
 
-        public BrowseController(IConfiguration config)
+        public BrowseController(IConfiguration config, IOptions<FileBrowserOptions> options)
         {
-            _rootDir = config["HOME_DIR"] ?? "/home/bradstricherz/Downloads";
+            _rootDir = config["HOME_DIR"] 
+                       ?? options.Value.HomeDirectory 
+                       ?? "/home/bradstricherz/Downloads";
         }
 
 
@@ -65,7 +68,6 @@ namespace MapLarge.Controllers
 
             return Ok(new { success = true, file = file.FileName });
         }
-
 
 
         // DELETE /api/browse/delete/{*path} - Deletes a file or folder (recursive if folder)
