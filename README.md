@@ -25,13 +25,44 @@ The application is deployed using a containerized service on [Render.com](https:
 
 ---
 
-##  Configuration
+Absolutely — here's an updated **README snippet** you can drop into your project's `README.md` under a `## Configuration` or `## Setup` section:
 
-* The home directory is configurable via an environment variable:
-  ```bash
-  export HOME_DIR=/path/to/your/folder
+---
 
-If not set, it defaults to `~/Downloads`.
+## Configuration
+
+The file browser's **home directory** is configurable via an environment variable:
+
+```bash
+export HOME_DIR=/path/to/your/folder
+```
+
+If `HOME_DIR` is **not set**, the application falls back to a default directory:
+
+```bash
+~/Downloads
+```
+
+Alternatively, you can define a default path in `appsettings.json`:
+
+```json
+{
+  "FileBrowser": {
+    "HomeDirectory": "C:\\Temp\\MapLargeTest"
+  }
+}
+```
+
+The application will prioritize:
+
+1. `HOME_DIR` environment variable
+2. `FileBrowser:HomeDirectory` in `appsettings.json`
+3. `~/Downloads` as a final fallback
+
+---
+
+Let me know if you'd like the full README updated, or want a `docker run` example with `HOME_DIR` set.
+
 
 ---
 
