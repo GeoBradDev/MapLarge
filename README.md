@@ -25,10 +25,6 @@ The application is deployed using a containerized service on [Render.com](https:
 
 ---
 
-Absolutely — here's an updated **README snippet** you can drop into your project's `README.md` under a `## Configuration` or `## Setup` section:
-
----
-
 ## Configuration
 
 The file browser's **home directory** is configurable via an environment variable:
@@ -58,11 +54,6 @@ The application will prioritize:
 1. `HOME_DIR` environment variable
 2. `FileBrowser:HomeDirectory` in `appsettings.json`
 3. `~/Downloads` as a final fallback
-
----
-
-Let me know if you'd like the full README updated, or want a `docker run` example with `HOME_DIR` set.
-
 
 ---
 
